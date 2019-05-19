@@ -6,3 +6,5 @@ npm-debug.log*
 .env
 
 nwb.config.js
+
+env.j
