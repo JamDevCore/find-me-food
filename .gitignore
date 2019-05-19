@@ -4,4 +4,5 @@
 /node_modules
 npm-debug.log*
 .env
-nwb.config.js
+
+./nwb.config.js
