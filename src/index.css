@@ -21,10 +21,16 @@ body {
   justify-content:center
 }
 .button {
+  padding:5px;
   background-color:#E65100;
+  border-radius: 8px;
+  outline:none;
 }
 .clickedButton {
+  padding:5px;
   background-color:#F57C00;
+  border-radius: 8px;
+  outline:none;
 }
 .alignCenter {
   display: flex;
