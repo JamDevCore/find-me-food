@@ -6,7 +6,7 @@ module.exports = {
     extra: {
       plugins: [
         new webpack.EnvironmentPlugin({
-          GOOGLE_MAPS_API_KEY: "AIzaSyCn7RP2W_4U327TI4pfwf2P086GEicPCZU"
+          GOOGLE_MAPS_API_KEY: ""
         })
       ]
     }
