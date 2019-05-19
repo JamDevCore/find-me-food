@@ -67,4 +67,7 @@ initApp();
 function findMeFoodOnClick() {
   const button = document.getElementById("findMeFoodButton");
   button.setAttribute("class", "clickedButton");
+
+
+
 }
