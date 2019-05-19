@@ -16,7 +16,10 @@ body {
   width:50%;
   margin: 100px auto;
 }
-
+.buttonDiv {
+  display: flex;
+  justify-content:center
+}
 .alignCenter {
   display: flex;
   justify-content:center
