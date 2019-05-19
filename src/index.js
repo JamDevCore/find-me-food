@@ -2,14 +2,12 @@ import axios from 'axios';
 import form from './components/form';
 import loading from './components/loading';
 import getQuery from './modules/get-query';
-import env from '../env.js';
 
 
 const addLocation = (position, geolocation) => {
-  console.log('here')
+  const apiKey = process.env.GOOGLE_MAPS_API_KEY;
   const query = getQuery();
   const distance = 2000;
-  const apiKey = env.GOOGLE_MAPS_API_KEY;
   const lat = position.coords.latitude;
   const long = position.coords.longitude;
   axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=${apiKey}`)
