@@ -2,7 +2,7 @@ import axios from 'axios';
 import form from './components/form';
 import loading from './components/loading';
 import getQuery from './modules/get-query';
-
+import refineQuery from './modules/refine-query'
 
 const addLocation = (position, geolocation) => {
   const apiKey = process.env.GOOGLE_MAPS_API_KEY;
@@ -38,7 +38,10 @@ const addLocation = (position, geolocation) => {
       };
 
       service = new google.maps.places.PlacesService(map);
-      service.textSearch(request, (success) => console.log(success));
+      service.textSearch(request, (result) => {
+        const bestItem = refineQuery(result);
+        console.log(bestItem);
+      });
   })
   .catch(err => console.log(err))
 }
