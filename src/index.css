@@ -8,10 +8,10 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-color: #FFA726;
+  background-color:#FFA726;
 }
 .card {
-  background-color: #FFE0B2;
+  background-color:#FFE0B2;
   padding: 50px;
   width:50%;
   margin: 100px auto;
@@ -19,6 +19,12 @@ body {
 .buttonDiv {
   display: flex;
   justify-content:center
+}
+.button {
+  background-color:#E65100;
+}
+.clickedButton {
+  background-color:#F57C00;
 }
 .alignCenter {
   display: flex;

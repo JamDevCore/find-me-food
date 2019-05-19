@@ -25,6 +25,8 @@ const addLocation = (position, geolocation) => {
 
 
 const initApp = () => {
+  const button = document.getElementById("findMeFoodButton");
+  button.addEventListener("click", findMeFoodOnClick);
   const geolocation = document.getElementById("geolocation");
   const loader = document.createElement('div');
   loader.setAttribute('class', 'alignCenter');
@@ -39,3 +41,8 @@ const initApp = () => {
   }
 }
 initApp();
+
+function findMeFoodOnClick() {
+  const button = document.getElementById("findMeFoodButton");
+  button.setAttribute("class", "clickedButton");
+}
