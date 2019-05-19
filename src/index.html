@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>find-me-food</title>
-    <meta name="description" content="">
+    <meta charset="UTF-8">
+    <title>Find Me Food</title>
+    <link rel="stylesheet" type="text/css" href="../src/index.css">
   </head>
   <body>
-    <div id="app"></div>
+    <div class="card">
+      <h1 class="text-center">Find Me Food!</h1>
+
+      <div id="geolocation">
+
+      </div>
+
+      <form class="checkBoxesForm">
+        <h4 class="text-center">Fancy Something Specific?</h4>
+        <div class="alignCenter">
+        <input type="checkbox" class="cuisineCheckbox" id="chinese" value="chinese">Chinese</input>
+        &nbsp;
+        <input type="checkbox" class="cuisineCheckbox" id="indian"  value="indian">Indian</input>
+        &nbsp;
+        <input type="checkbox" class="cuisineCheckbox" id="italian"  value="italian">Italian</input>
+        &nbsp;
+        <input type="checkbox" class="cuisineCheckbox" id="british"  value="british">British</input>
+        <div>
+      </form>
+  </div>
   </body>
 </html>

@@ -12,8 +12,11 @@
     "test:watch": "nwb test --server"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "require": "^2.4.20"
   },
   "devDependencies": {
+    "dotenv-webpack": "^1.7.0",
     "nwb": "0.23.x"
   },
   "author": "",
