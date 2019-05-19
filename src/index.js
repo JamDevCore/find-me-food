@@ -45,6 +45,10 @@ const addLocation = (position, geolocation) => {
 
 
 const initApp = () => {
+  const script = document.createElement('script');
+  script.type = 'text/javascript'
+  script.src = `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_PLACES_KEY}&libraries=places`;
+  document.head.append(script);
   const button = document.getElementById("findMeFoodButton");
   button.addEventListener("click", findMeFoodOnClick);
   const geolocation = document.getElementById("geolocation");
