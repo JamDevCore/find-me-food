@@ -16,12 +16,31 @@ const addLocation = (position, geolocation) => {
   .then((res) => {
     console.log(res)
     const address = res.data.results[0].formatted_address;
-    axios.get(`https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${query}&inputtype=textquery&fields=photos,formatted_address,name,opening_hours,rating&locationbias=circle:${distance}@${lat},${long}&key=${apiKey}`)
     const p = document.createElement('p');
     p.setAttribute('class', 'text-center')
     p.innerHTML = address;
     geolocation.innerHTML = '';
     geolocation.append(p)
+    var map;
+    var service;
+    var infowindow;
+    var request;
+    var location = new google.maps.LatLng(lat,long);
+    console.log(location)
+
+      map = new google.maps.Map(document.getElementById('map'), {
+      center: location,
+      zoom: 15
+    });
+
+      request = {
+        location: location,
+        radius: '500',
+        query: 'restaurant'
+      };
+
+      service = new google.maps.places.PlacesService(map);
+      service.textSearch(request, (success) => console.log(success));
   })
   .catch(err => console.log(err))
 }
