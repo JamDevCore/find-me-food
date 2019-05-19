@@ -16,6 +16,7 @@ body {
   padding: 50px;
   width:50%;
   margin: 100px auto;
+  border-radius: 8px;
 }
 .buttonDiv {
   display: flex;
