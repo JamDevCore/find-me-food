@@ -46,3 +46,7 @@ body {
 .checkBoxesForm {
   width: 100%;
 }
+
+.smallText {
+  font-size:12px;
+}

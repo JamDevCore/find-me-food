@@ -15,8 +15,8 @@ const addLocation = (position, geolocation) => {
     console.log(res)
     const address = res.data.results[0].formatted_address;
     const p = document.createElement('p');
-    p.setAttribute('class', 'text-center')
-    p.innerHTML = address;
+    p.setAttribute('class', 'text-center smallText')
+    p.innerHTML = `Finding food near ${address}`;
     geolocation.innerHTML = '';
     geolocation.append(p)
     var map;
@@ -41,6 +41,11 @@ const addLocation = (position, geolocation) => {
       service.textSearch(request, (result) => {
         const bestItem = refineQuery(result);
         console.log(bestItem);
+        const bestItemHtml = document.createElement("h1");
+        const text = document.createTextNode(bestItem.name);
+        bestItemHtml.setAttribute("class", "text-center");
+        bestItemHtml.append(text);
+        document.getElementById("restaurant").append(bestItemHtml);
       });
   })
   .catch(err => console.log(err))
