@@ -11,6 +11,12 @@ body {
   background-color:#FFA726;
   font-family: 'Nanum Gothic', sans-serif;
 }
+
+.box {
+  height: 75px;
+  margin: 20px 0;
+  padding: 15px;
+}
 .card {
   background-color:#FFE0B2;
   padding: 50px;
