@@ -1,4 +1,4 @@
 const loading = `
-<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>`;
+<div class="loadingContainer"><i class="fas fa-utensils loading"></i></div>`;
 
 export default loading;
