@@ -60,7 +60,8 @@ const initApp = () => {
   const button = document.getElementById("findMeFoodButton");
   button.addEventListener("click", findMeFoodOnClick);
 
-  const accordionHead = document.getElementById("accordion");
+  // Here you were calling get id when there was no id, you had used a class in the index.html
+  const accordionHead = document.getElementById("toggleAccordion");
   accordionHead.addEventListener("click", specificFoodOnClick);
 
   const geolocation = document.getElementById("geolocation");
@@ -92,6 +93,10 @@ function specificFoodOnClick() {
   //   panel.style.display = "block";
   // }
 
-  var panel = document.getElementByClassName("panel");
+  // getElementsByClassName returns an array or htmlcollection as classes are assumed
+  // to be multiple in nature (e.g multiple elements) to find a specific
+  //thing use an ID. Also you had Element, not Elements.
+  var panel = document.getElementById("togglePanel");
+  console.log(panel)
   panel.setAttribute("class", "openAccordion");
 }
