@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Find Me Food</title>
     <link rel="stylesheet" type="text/css" href="../src/index.css">
+
   </head>
   <body>
     <div class="card">
@@ -17,30 +18,37 @@
 
       </div>
 
-      <form class="checkBoxesForm">
-        <h4 class="text-center">Fancy Something Specific?</h4>
-        <div class="alignCenter">
-          <input type="checkbox" class="cuisineCheckbox" id="chinese" value="chinese">Chinese</input>
-          &nbsp;
-          <input type="checkbox" class="cuisineCheckbox" id="indian"  value="indian">Indian</input>
-          &nbsp;
-          <input type="checkbox" class="cuisineCheckbox" id="italian"  value="italian">Italian</input>
-          &nbsp;
-          <input type="checkbox" class="cuisineCheckbox" id="british"  value="british">British</input>
+        <!-- <h2 class="accordionHeader"></h2> -->
+        <button class="accordion">   Find Specific Food!     </button>
+        <div class="panel">
+          <form class="checkBoxesForm">
+            <div class="alignCenter">
+              <input type="checkbox" class="cuisineCheckbox" id="chinese" value="chinese">Chinese</input>
+              &nbsp;
+              <input type="checkbox" class="cuisineCheckbox" id="indian"  value="indian">Indian</input>
+              &nbsp;
+              <input type="checkbox" class="cuisineCheckbox" id="italian"  value="italian">Italian</input>
+              &nbsp;
+              <input type="checkbox" class="cuisineCheckbox" id="british"  value="british">British</input>
+            </div>
+          </form>
+          <br>
+          <div class="buttonDiv">
+            <button
+            type="button"
+            class="button"
+            id="findMeFoodButton"
+            value="Find Me Food!"
+            >
+            Find Specific Food!
+            </button>
+          </div>
         </div>
-      </form>
-      <br>
-      <div class="buttonDiv">
-        <button
-        type="button"
-        class="button"
-        id="findMeFoodButton"
-        value="Find Me Food!"
-        >
-          Find Specific Food!
-        </button>
-      </div>
-  </div>
+
+
+
+
+
   <div id="map">
 
   </div>

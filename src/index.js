@@ -59,6 +59,10 @@ const initApp = () => {
   document.head.append(script);
   const button = document.getElementById("findMeFoodButton");
   button.addEventListener("click", findMeFoodOnClick);
+
+  const accordionHead = document.getElementById("accordion");
+  accordionHead.addEventListener("click", specificFoodOnClick);
+
   const geolocation = document.getElementById("geolocation");
   const loader = document.createElement('div');
   loader.setAttribute('class', 'alignCenter');
@@ -77,7 +81,15 @@ initApp();
 function findMeFoodOnClick() {
   const button = document.getElementById("findMeFoodButton");
   button.setAttribute("class", "clickedButton");
+}
 
-
-
+function specificFoodOnClick() {
+  const acc = document.getElementByClassName("accordion");
+  acc.toggle("active");
+  var panel = document.getElementByClassName("panel");
+  if (panel.style.display === "block") {
+    panel.style.display = "none";
+  } else {
+    panel.style.display = "block";
+  }
 }
