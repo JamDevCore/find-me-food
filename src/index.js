@@ -84,12 +84,14 @@ function findMeFoodOnClick() {
 }
 
 function specificFoodOnClick() {
-  const acc = document.getElementByClassName("accordion");
-  acc.toggle("active");
+  // const acc = document.getElementByClassName("accordion");
+  // acc.toggle("active");
+  // if (panel.style.display === "block") {
+  //   panel.style.display = "none";
+  // } else {
+  //   panel.style.display = "block";
+  // }
+
   var panel = document.getElementByClassName("panel");
-  if (panel.style.display === "block") {
-    panel.style.display = "none";
-  } else {
-    panel.style.display = "block";
-  }
+  panel.setAttribute("class", "openAccordion");
 }

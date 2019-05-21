@@ -55,6 +55,13 @@ body {
   font-size:18px;
 }
 
+.openAccordion {
+  padding: 0 18px;
+  display: block;
+  background-color: white;
+  overflow: hidden;
+}
+
 .accordion {
   background-color: #FFE0B2;
   color: #444;
