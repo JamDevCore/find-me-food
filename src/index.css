@@ -58,7 +58,7 @@ body {
 .openAccordion {
   padding: 0 18px;
   display: block;
-  background-color: white;
+  background-color: #FFE0B2;
   overflow: hidden;
 }
 
@@ -78,7 +78,7 @@ body {
   background-color: #ccc;
 }
 
-.panel {
+.togglePanel {
   padding: 0 18px;
   display: none;
   background-color: white;

@@ -85,18 +85,11 @@ function findMeFoodOnClick() {
 }
 
 function specificFoodOnClick() {
-  // const acc = document.getElementByClassName("accordion");
-  // acc.toggle("active");
-  // if (panel.style.display === "block") {
-  //   panel.style.display = "none";
-  // } else {
-  //   panel.style.display = "block";
-  // }
-
-  // getElementsByClassName returns an array or htmlcollection as classes are assumed
-  // to be multiple in nature (e.g multiple elements) to find a specific
-  //thing use an ID. Also you had Element, not Elements.
   var panel = document.getElementById("togglePanel");
-  console.log(panel)
-  panel.setAttribute("class", "openAccordion");
+  var classCheck = panel.getAttribute("class");
+  if (classCheck === "togglePanel") {
+    panel.setAttribute("class", "openAccordion");
+  } else {
+      panel.setAttribute("class", "togglePanel");
+  }
 }
