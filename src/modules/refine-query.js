@@ -11,7 +11,7 @@ const refineQuery = (items) => {
   //TODO: need to check how it returns the restaurant type (chines indian etc. for sortedItems[x].type)
   var y = 0;
   var radioButton;
-  for (radioButton in getElementsByClassName("cuisineCheckbox")) {
+  for (radioButton in document.getElementsByClassName("cuisineCheckbox")) {
     if (!null === radioButton.value) {
       var type = radioButton.value
       for (x = 0; x < sortedItems.length; x++) {
