@@ -4,15 +4,17 @@
     <meta charset="UTF-8">
     <title>Find Me Food</title>
     <link rel="stylesheet" type="text/css" href="../src/index.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
   </head>
   <body>
     <div class="card">
-      <h1 class="text-center">Find Me Food!</h1>
-
-      <div id="geolocation">
-
+      <h2 class="text-center">Find Me Food!</h2>
+      <div id="restaurant" class="alignCenter">
+      </div>
+      <div class="box" id="location">
       </div>
 
+<<<<<<< HEAD
       <form class="checkBoxesForm">
         <div class="buttonDiv">
           <div>
@@ -24,18 +26,42 @@
           >
             Find Me Food!
           </button>
+=======
+        <!-- <h2 class="accordionHeader"></h2> -->
+        <button class="accordion" id="toggleAccordion">   Find Specific Food!     </button>
+        <div class="togglePanel" id="togglePanel">
+          <form class="checkBoxesForm">
+            <br>
+            <div class="alignCenter">
+              <input type="radio" name="radioButton" class="cuisineCheckbox" value="chinese">Chinese</input>
+              &nbsp;
+              <input type="radio" name="radioButton" class="cuisineCheckbox" value="indian">Indian</input>
+              &nbsp;
+              <input type="radio" name="radioButton" class="cuisineCheckbox" value="italian">Italian</input>
+              &nbsp;
+              <input type="radio" name="radioButton" class="cuisineCheckbox" value="british">British</input>
+            </div>
+          </form>
+          <br>
+          <div class="buttonDiv">
+            <button
+            type="button"
+            class="button"
+            id="findMeFoodButton"
+            value="Find Me Food!"
+            >
+            Find Specific Food!
+            </button>
+          </div>
+>>>>>>> master
         </div>
-        <h4 class="text-center">Fancy Something Specific?</h4>
-        <div class="alignCenter">
-        <input type="checkbox" class="cuisineCheckbox" id="chinese" value="chinese">Chinese</input>
-        &nbsp;
-        <input type="checkbox" class="cuisineCheckbox" id="indian"  value="indian">Indian</input>
-        &nbsp;
-        <input type="checkbox" class="cuisineCheckbox" id="italian"  value="italian">Italian</input>
-        &nbsp;
-        <input type="checkbox" class="cuisineCheckbox" id="british"  value="british">British</input>
-        <div>
-      </form>
+
+
+
+
+
+  <div id="map">
+
   </div>
   </body>
 </html>
