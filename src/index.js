@@ -90,6 +90,6 @@ function specificFoodOnClick() {
   if (classCheck === "togglePanel") {
     panel.setAttribute("class", "openAccordion");
   } else {
-      panel.setAttribute("class", "togglePanel");
+    panel.setAttribute("class", "togglePanel");
   }
 }
