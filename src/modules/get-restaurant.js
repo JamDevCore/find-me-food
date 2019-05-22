@@ -36,7 +36,7 @@ const getRestaurant = (position, domContainer) => {
   .then((res) => {
     console.log(res)
     const address = res.data.results[0].formatted_address;
-    if(document.getElementById('gScript') && google) {
+    if(google) {
       const location = new google.maps.LatLng(lat,long);
       const map = new google.maps.Map(document.getElementById('map'), {
         center: location,
@@ -51,7 +51,7 @@ const getRestaurant = (position, domContainer) => {
     }
   })
 
-  .catch(err => console.log(err))
+  .catch(err => console.log('fail'))
 }
 
 export default getRestaurant;

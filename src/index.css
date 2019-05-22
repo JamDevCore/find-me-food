@@ -1,5 +1,6 @@
 @import './loading.css';
 @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Stylish&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Black|Baloo+Bhai|Days+One|Hammersmith+One|Paytone+One&display=swap');
 
 body {
   height: 100vh;
@@ -8,38 +9,58 @@ body {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-color:#FFA726;
-  font-family: 'Nanum Gothic', sans-serif;
+  background-color:#E69324;
+  font-family: 'Baloo Bhai', sans-serif;
+  color: #326171;
+}
+
+h1 {
+  font-size: 48px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 32px;
 }
 
 .box {
-  height: 75px;
   margin: 20px 0;
   padding: 15px;
 }
 .card {
-  background-color:#FFE0B2;
+  background-color: transparent;
   padding: 50px;
   width:50%;
-  margin: 100px auto;
+  margin: 75px auto;
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .buttonDiv {
   display: flex;
   justify-content:center
 }
-.button {
-  padding:5px;
-  background-color:#E65100;
-  border-radius: 8px;
-  outline:none;
+button {
+  background-color: #326171;
+  color: white;
+  font-family: inherit;
+  cursor: pointer;
+  width: 200px;
+  margin: 0 auto;
+  border: none;
+  text-align: center;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+  padding: 8px 15px;
+  border-radius:  4px;
 }
-.clickedButton {
-  padding:5px;
-  background-color:#F57C00;
-  border-radius: 8px;
-  outline:none;
-}
+
 .alignCenter {
   display: flex;
   justify-content:center
@@ -64,24 +85,11 @@ body {
 .openAccordion {
   padding: 0 18px;
   display: block;
-  background-color: #FFE0B2;
   overflow: hidden;
 }
 
-.accordion {
-  background-color: #FFE0B2;
-  color: #444;
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  text-align: center;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
 
 .accordion:hover {
-  background-color: #ccc;
 }
 
 .togglePanel {
@@ -89,4 +97,7 @@ body {
   display: none;
   background-color: white;
   overflow: hidden;
+}
+input {
+  margin: 4px 10px;
 }
