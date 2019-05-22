@@ -12,7 +12,7 @@ const refineQuery = (items) => {
   var y = 0;
   var radioButton;
   for (radioButton in document.getElementsByClassName("cuisineCheckbox")) {
-    if (!null === radioButton.value) {
+    if (radioButton.checked === true) {
       var type = radioButton.value
       for (x = 0; x < sortedItems.length; x++) {
         if (sortedItems[x].type === radiobutton) {
