@@ -4,6 +4,7 @@ import getQuery from './modules/get-query';
 import getRestaurant from './modules/get-restaurant';
 import setLoading from './modules/set-loading';
 
+let currentLocation = '';
 
 const addGooglePlacesScript = async () => {
   // This was a bit strange, had to set it to await appending to the head to make sure
@@ -31,7 +32,10 @@ const initApp = () => {
   setLoading(loadingContainer, true);
   if ("geolocation" in navigator) {
     navigator.geolocation.getCurrentPosition(
-        (position) => getRestaurant(position, loadingContainer),
+        (position) => {
+          currentLocation = position;
+          getRestaurant(position, loadingContainer)
+        },
         (failure) => { locationContainer.innerHTML = 'TODO: Add a form' });
       } else {
   console.log('no');
@@ -40,8 +44,9 @@ const initApp = () => {
 
 
 function findMeFoodOnClick() {
-  const button = document.getElementById("findMeFoodButton");
-  button.setAttribute("class", "clickedButton");
+  const loadingContainer = document.getElementById("location")
+  setLoading(loadingContainer, true)
+  getRestaurant(currentLocation, loadingContainer)
 }
 
 function specificFoodOnClick() {

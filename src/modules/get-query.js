@@ -5,9 +5,9 @@ const getQuery = () => {
   const checkboxes = Array.prototype.slice.call(collection);
   checkboxes.forEach((checkbox) => {
     console.log(checkbox.value);
-    if (checkbox.checked) query = `${checkbox.value} ${query}}`;
+    if (checkbox.checked) query = `${checkbox.value} ${query}`;
   });
-  console.log(query);
+  return query;
 }
 
 export default getQuery;
