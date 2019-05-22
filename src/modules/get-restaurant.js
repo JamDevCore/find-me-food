@@ -16,7 +16,9 @@ const addResultToPage = (domContainer, address, result) => {
   const text = document.createTextNode(topRestaurantChoice.name);
   restaurantHeading.setAttribute("class", "text-center");
   restaurantHeading.append(text);
-  document.getElementById("restaurant").append(restaurantHeading);
+  const heading = document.getElementById("restaurant");
+  heading.innerHTML = ''
+  heading.append(restaurantHeading)
 }
 
 const formatSearch = (position) => {
@@ -29,7 +31,7 @@ const formatSearch = (position) => {
 }
 
 const getRestaurant = (position, domContainer) => {
-  const { lat, long, distance, query } = formatSearch(position)
+  const { lat, long, distance, queryString } = formatSearch(position)
   axios.get(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${long}&key=${apiKey}`)
   .then((res) => {
     console.log(res)
@@ -40,9 +42,10 @@ const getRestaurant = (position, domContainer) => {
         center: location,
         zoom: 15
       });
-      const request = { location, radius: '500', query: 'restaurant' };
+      const request = { location, radius: distance, query: queryString };
       const service = new google.maps.places.PlacesService(map);
       service.textSearch(request, (result) => {
+      console.log(result)
       addResultToPage(domContainer, address, result);
       });
     }
