@@ -28,28 +28,31 @@ const setUpPageButtons = () => {
 const initApp = () => {
   addGooglePlacesScript();
   setUpPageButtons();
-  const loadingContainer = document.getElementById("location")
+  const loadingContainer = document.getElementById("loadingContainer")
   setLoading(loadingContainer, true);
-  if ("geolocation" in navigator) {
-    navigator.geolocation.getCurrentPosition(
-        (position) => {
-          currentLocation = position;
-          getRestaurant(position, loadingContainer)
-        },
-        (failure) => { locationContainer.innerHTML = 'TODO: Add a form' });
-      } else {
-  console.log('no');
-  }
+  setTimeout(() => {
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition(
+          (position) => {
+            currentLocation = position;
+            getRestaurant(position, loadingContainer)
+          },
+          (failure) => { locationContainer.innerHTML = 'TODO: Add a form' });
+        } else {
+    console.log('no');
+    }
+  }, 200);
+
 }
 
 
 function findMeFoodOnClick() {
-  const loadingContainer = document.getElementById("location")
+  const loadingContainer = document.getElementById("loadingContainer")
   setLoading(loadingContainer, true)
   getRestaurant(currentLocation, loadingContainer)
 }
 
-function specificFoodOnClick() {
+export function specificFoodOnClick() {
   var panel = document.getElementById("togglePanel");
   var classCheck = panel.getAttribute("class");
   if (classCheck === "togglePanel") {
