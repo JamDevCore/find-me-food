@@ -8,6 +8,7 @@ const apiKey = process.env.GOOGLE_MAPS_API_KEY;
 
 const addResultToPage = (domContainer, address, result) => {
   document.getElementById('searchResult').style.display = 'block';
+  document.getElementById('togglePanel').setAttribute("class", "togglePanel");
   const p = document.createElement('p');
   p.setAttribute('class', 'text-center smallText')
   p.setAttribute('id', 'currentLocation')

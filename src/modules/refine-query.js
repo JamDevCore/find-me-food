@@ -1,34 +1,30 @@
 
-const refineQuery = (items) => {
+const resetSearchStorage = (session) => {
+  session.clear();
+}
 
-  const sortedItems = items.sort((a,b)=>{
+const refineQuery = (items) => {
+  let itemCount = 0;
+  let sortedItems = items.sort((a,b)=>{
     return b.rating-a.rating;
   });
-
-
-  // //look for radio button choice here.
-  //
-  // //TODO: need to check how it returns the restaurant type (chines indian etc. for sortedItems[x].type)
-  // var y = 0;
-  // var radioButton;
-  // for (radioButton in document.getElementsByClassName("cuisineCheckbox")) {
-  //   if (radioButton.checked === true) {
-  //     var type = radioButton.value
-  //     for (x = 0; x < sortedItems.length; x++) {
-  //       if (sortedItems[x].type === radiobutton) {
-  //         y = x;
-  //         break;
-  //       }
-  //     }
-  //   }
-  // }
-
-
-  // const bestItem = sortedItems[y];
-
-
-  return sortedItems[0];
-
+  const session = window.sessionStorage;
+  const previousResults = JSON.parse(session.getItem('find-me-food-results')) || [];
+  console.log(previousResults)
+  const filteredItems = [];
+  sortedItems.forEach((item) => {
+    console.log(previousResults.indexOf(item.name))
+    if(previousResults.indexOf(item.name) === -1) filteredItems.push(item);
+  });
+  console.log(filteredItems)
+  const newResults = previousResults;
+  if(filteredItems[itemCount]) newResults.push(filteredItems[itemCount].name);
+  session.setItem('find-me-food-results', JSON.stringify(newResults))
+  if(!filteredItems[itemCount]) {
+    resetSearchStorage(session);
+  }
+  return filteredItems[itemCount];
+  // TODO: Restart search for second page of results when this list of twenty runs out!
 }
 
  export default refineQuery;
