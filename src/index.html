@@ -15,11 +15,13 @@
       <div id="restaurant" class="alignCenter-col">
       </div>
         <!-- <h2 class="accordionHeader"></h2> -->
-        <button class="optionButton" id="toggleAccordion">Options</button>
+        <button class="link" id="toggleAccordion">Options</button>
         <div class="togglePanel" id="togglePanel">
           <form class="checkBoxesForm">
             <br>
             <div class="alignCenter">
+              <input type="radio" name="radioButton" checked class="cuisineCheckbox" value="">All</input>
+              &nbsp;
               <input type="radio" name="radioButton" class="cuisineCheckbox" value="chinese">Chinese</input>
               &nbsp;
               <input type="radio" name="radioButton" class="cuisineCheckbox" value="indian">Indian</input>
@@ -32,6 +34,7 @@
           <br>
           <div class="buttonDiv">
             <button
+            class="btn"
             type="button"
             id="findMeFoodButton"
             value="Find Me Food!"
