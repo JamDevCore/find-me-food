@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "dotenv-webpack": "^1.7.0",
-    "nwb": "0.23.x"
+    "nwb": "0.25.x"
   },
   "author": "",
   "license": "MIT",
